@@ -1175,3 +1175,229 @@ nav .menu:hover .mage-menu {
     background-color: var(--main-color);
 }
 /* ? end pricing */
+/*  ?  top videos  */
+.top-videos {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.top-videos .container {
+    display: flex;
+}
+.top-videos .container > div:first-child {
+    border: solid 2px #f5f5f5;
+    min-width: 300px;
+}
+.top-videos .container > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 2px var(--section-background);
+    min-width: 300px;
+    padding: 10px;
+    background-color: var(--section-background);
+}
+@media (max-width: 992px) {
+    .top-videos .container {
+        flex-direction: column;
+    }
+}
+.top-videos .container > div:last-child p {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+.top-videos li a {
+    color: black;
+    text-transform: capitalize;
+}
+.top-videos .top-v {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    font-weight: 800;
+    font-size: 18px;
+}
+.top-videos span {
+    display: block;
+    margin-top: 10px;
+    color: #707070;
+}
+.top-videos li {
+    background-color: white;
+    padding: 20px;
+    border-top: solid 2px #f5f5f5;
+}
+.top-videos img {
+    max-width: 100%;
+}
+/*  ? End top videos  */
+/* ? stats */
+.stats {
+    position: relative;
+    padding: var(--main-padding-top) 0px;
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.932);
+    z-index: -1;
+}
+.stats h2 {
+    margin: 0 auto 50px;
+    width: fit-content;
+    font-size: 40px;
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+.stats .container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 200px;
+    background-color: white;
+    opacity: 0.8;
+    padding: 20px 0;
+}
+.stats .container .box:hover {
+    opacity: 1;
+}
+.stats .container .box::after,
+.stats .container .box::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0%;
+    background-color: var(--main-color);
+    transition: 600ms;
+}
+.stats .container .box::before {
+    bottom: 0;
+    left: 0;
+}
+.stats .container .box::after {
+    top: 0;
+    right: 0;
+}
+.stats .container .box:hover::after,
+.stats .container .box:hover::before {
+    height: 100%;
+}
+.stats .container .box h3 {
+    font-size: 50px;
+    font-weight: 900;
+}
+.stats .container .box p {
+    color: var(--main-color-alt);
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+/* ?End stats */
+/* ? discount */
+.discount {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+@media (max-width: 992px) {
+    .discount > * {
+        grid-column: span 2;
+    }
+}
+.discount > div:first-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/discount-background1.jpg);
+    background-size: cover;
+    z-index: 1;
+    padding: 50px 10px;
+    animation: background-animation 5s linear 0s infinite alternate both;
+}
+@keyframes background-animation {
+    to {
+        background-image: url(../images/discount-background2.jpg);
+    }
+}
+.discount > div:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2195f3e5;
+    z-index: -1;
+}
+.discount > div:first-child h2 {
+    font-size: 34px;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 20px;
+}
+.discount > div:first-child p {
+    text-align: center;
+    line-height: 1.8;
+    max-width: 500px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.discount img {
+    width: 300px;
+    max-width: 100%;
+}
+.discount form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+.discount form h2 {
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+.discount form input,
+.discount form textarea {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 300px;
+    caret-color: var(--main-color);
+}
+.discount form input:focus::placeholder,
+.discount form textarea:focus::placeholder {
+    visibility: hidden;
+}
+.discount form textarea {
+    resize: none;
+    height: 200px;
+}
+.discount form input[type="submit"] {
+    background-color: var(--main-color-alt);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+}
+
+/* ? End discount */
