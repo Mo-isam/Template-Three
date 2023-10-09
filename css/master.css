@@ -1051,3 +1051,127 @@ nav .menu:hover .mage-menu {
     }
 }
 /* ? End events */
+/* ? pricing */
+.pricicng {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.pricicng .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    /* align-items: center; */
+}
+.pricicng .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.199);
+    z-index: 8;
+}
+.pricicng .box::before,
+.pricicng .box::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 0;
+    transition: var(--main-transition);
+    background-color: #f6f6f6;
+    z-index: -1;
+}
+.pricicng .box::before {
+    top: 0;
+    right: 0;
+}
+.pricicng .box::after {
+    bottom: 0;
+    left: 0;
+}
+.pricicng .box:hover::before,
+.pricicng .box:hover::after {
+    width: 100%;
+}
+.pricicng .m {
+    transform: translateY(-20px);
+}
+.pricicng .m:hover > div::after {
+    border-color: transparent transparent #f6f6f6 transparent;
+}
+.pricicng .m > div::after {
+    position: absolute;
+    content: "";
+    border: solid 25px;
+    border-color: transparent transparent white transparent;
+    right: 15px;
+    top: 152px;
+    transition: 300ms;
+}
+.pricicng .m > div::before {
+    position: absolute;
+    content: "Most Popular";
+    background-color: var(--main-color-alt);
+    color: white;
+    padding: 10px 40px 10px 10px;
+    font-size: 26px;
+    font-weight: bold;
+    top: 0;
+    right: -185px;
+    transform: rotatez(90deg);
+    transform-origin: left top;
+}
+@media (max-width: 1200px) {
+    .pricicng .m {
+        transform: translateY(0px);
+    }
+}
+.pricicng .box > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    text-transform: capitalize;
+}
+.pricicng .box h3 {
+    font-size: 24px;
+}
+.pricicng .box h2 {
+    color: var(--main-color);
+    font-size: 56px;
+    font-weight: 900;
+}
+.pricicng .box img {
+    width: 70px;
+    margin: 20px 0;
+}
+.pricicng .box li {
+    padding: 15px 20px;
+    line-height: 2;
+    border-top: solid 2px var(--section-background);
+}
+.pricicng .box li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 15px;
+    color: var(--main-color);
+}
+.pricicng .box a {
+    color: var(--main-color);
+    margin: 20px auto 40px;
+    padding: 10px;
+    width: fit-content;
+    border: solid 3px var(--main-color);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 8px;
+    transition: var(--main-transition);
+}
+.pricicng .box a:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+/* ? end pricing */
