@@ -1529,8 +1529,9 @@ footer hr {
 footer h3 {
     text-transform: capitalize;
     width: fit-content;
-    margin:0 auto 10px;
-}footer h3 > i {
-   color: red;
+    margin: 0 auto 10px;
+}
+footer h3 > i {
+    color: red;
 }
 /* ? End footer */
